@@ -1,22 +1,38 @@
+//modules
 import React from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Link><h1>Home</h1></Link>
-        <Link><h1>About</h1></Link>
-        <Link><h1>Projects</h1></Link>
-        <Link><h1>Fun</h1></Link>
-      </div>
-    </Router>
+      <div>
+        <div>
+          <h1>Navigation Section</h1>
+          <ul>
+            <li>Home</li>
+            <li>Projects</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <img src="https://via.placeholder.com/100" />
+        </div>
+        <div>
+          <h1>Featured project Front Page</h1>
+          <div>
+            <h2>Front Page Project Title</h2>
+            <div className="front-page-project-container"></div>
+          </div>
+        </div>
+        <footer>
+          <ul>
+            <li>Contact Logos go here</li>
+          </ul>
+        </footer>
+      </div> 
+
+      
+
   );
 }
 
