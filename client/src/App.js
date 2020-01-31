@@ -2,21 +2,14 @@
 import React from 'react';
 import './App.css';
 
+//Components
+import Navigation from './components/Navigation';
 
 
 function App() {
   return (
       <div>
-        <div>
-          <h1>Navigation Section</h1>
-          <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-          <img src="https://via.placeholder.com/100" />
-        </div>
+        <Navigation />
         <div>
           <h1>Featured project Front Page</h1>
           <div>
