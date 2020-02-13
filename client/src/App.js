@@ -2,6 +2,8 @@
 import React from 'react';
 import './App.css';
 import './components/Navigation/Navigation.css';
+
+
 //Components
 import Navigation from './components/Navigation/Navigation';
 
