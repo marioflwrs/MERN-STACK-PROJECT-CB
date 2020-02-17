@@ -1,3 +1,16 @@
 .nav-container {
-    background-color: lightgray;
+    display: grid;
+    background: lightgrey;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-bar a:hover {
+    color: red;
 }
