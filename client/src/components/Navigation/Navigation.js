@@ -8,7 +8,7 @@ import Jams from '../Jams/Jams.js';
 const Navigation = () => {
     return (
         <div className="nav-container">
-          <h1>Navigation Section</h1>
+          <h1>CypherBreak</h1>
           <nav className="nav-bar">
             <Link to="/">Home</Link>{" "}
             <Link to="/dashboard">Dashboard</Link>

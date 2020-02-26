@@ -3,6 +3,10 @@
     background: lightgrey;
 }
 
+.nav-container h1 {
+    margin: 1rem;
+}
+
 .nav-bar a {
     text-decoration: none;
     color: black;
@@ -13,4 +17,5 @@
 
 .nav-bar a:hover {
     color: red;
+    transition: 0.2s ease-in-out;
 }
