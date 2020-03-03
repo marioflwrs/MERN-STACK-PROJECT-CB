@@ -1,0 +1,6 @@
+dashboard-container {
+    width: 800px;
+    height: 800px;
+    background: grey;
+    margin: 2rem;
+}

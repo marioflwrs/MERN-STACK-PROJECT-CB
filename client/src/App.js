@@ -7,11 +7,10 @@ import './components/Navigation/Navigation.css';
 //Components
 import Navigation from './components/Navigation/Navigation';
 
-
 function App() {
 
   return (
-      <div>
+      <div className="website-container">
         <Navigation />
       </div> 
   );

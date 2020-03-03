@@ -1,21 +1,23 @@
 .nav-container {
     display: grid;
-    background: lightgrey;
+    color: #e6e6e6;
+    margin-left: 2.2rem;
+    margin-top: 1.3rem;
 }
 
 .nav-container h1 {
-    margin: 1rem;
+    margin: -0.4rem;
+    margin-bottom: -0.4rem;
 }
 
 .nav-bar a {
     text-decoration: none;
-    color: black;
-    margin: 1rem;
-    text-align: center;
-    justify-content: center;
+    color: #e6e6e6;
+    margin: 0;
+    font-size: 2.2rem;
 }
 
 .nav-bar a:hover {
-    color: red;
+    color: #22b573;
     transition: 0.2s ease-in-out;
 }

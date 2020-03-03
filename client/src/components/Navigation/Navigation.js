@@ -1,24 +1,23 @@
 import React from 'react';
 import { Link, Router } from '@reach/router';
 import './Navigation.css';
-import Dashboard from '../Dashboard/Dashboard.js';
+import Forum from '../Forum/Forum.js';
 import Home from '../Home/Home.js';
-import Jams from '../Jams/Jams.js';
+import Events from '../Events/Events.js';
 
 const Navigation = () => {
     return (
         <div className="nav-container">
-          <h1>CypherBreak</h1>
           <nav className="nav-bar">
-            <Link to="/">Home</Link>{" "}
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/jams">Jams</Link>
+            <Link to="/"><h1>CypherBreak</h1></Link> {" "}
+            <Link to="/Forum"><h1>Forum</h1></Link>
+            <Link to="/Events"><h1>Events</h1></Link>
           </nav>
 
           <Router>
             <Home path="/" />
-            <Dashboard path="/dashboard" />
-            <Jams path="/jams" />
+            <Forum path="/Forum" />
+            <Events path="/Events" />
           </Router>
         </div>
     );
