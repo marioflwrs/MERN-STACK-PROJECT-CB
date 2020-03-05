@@ -1,4 +1,12 @@
-.home-container {
-    width: 100%;
-    height: 100%;
+
+.news-card {
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    justify-content: stretch;
+    align-content: start;
+}
+
+.news-card h1 {
+    color: #e6e6e6;
 }
