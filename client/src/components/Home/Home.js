@@ -11,7 +11,7 @@ const Home = () => {
                     <p>Cillum consequat aliqua exceptexceptexcepteur est.</p>
                 </div>
                 <div className="news-card">
-                    <h1>Title</h1>
+                    <h1>Title</h1> 
                     <img src="https://www.fillmurray.com/300/300" alt="news cover" />
                     <p>Ut voluptate fugiat eu amet duis consectetur occaecat mollit.</p>
                 </div>

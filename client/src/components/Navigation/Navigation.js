@@ -14,7 +14,7 @@ const Navigation = () => {
     return (
         <div>
           <nav className="nav-bar">
-            <Link to="/"><h1>CypherBreak</h1></Link> {" "}
+            <Link to="/"><h1>CypherBreak</h1></Link> 
             <Link to="/Forum"><h1>Forum</h1></Link>
             <Link to="/Events"><h1>Events</h1></Link>
           </nav>
