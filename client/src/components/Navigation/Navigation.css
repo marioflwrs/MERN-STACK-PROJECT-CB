@@ -1,20 +1,10 @@
-.nav-bar {
-    display: grid;
-    color: #e6e6e6;
-    margin: 0;
-}
-
-.nav-bar a {
+a {
     text-decoration: none;
-}
-
-.nav-bar a:hover {
-    color: #22b573;
-    transition: 0.2s ease-in-out;
-}
-
-.nav-bar h1 {
+    color: #adadad;
+    font-size: 4em;
     margin: 0;
-    font-size: 3rem;
-    color: #e6e6e6;
+}
+
+h1 {
+    margin: 0;
 }
