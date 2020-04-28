@@ -1,0 +1,11 @@
+.article-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.article-solo-container {
+    width: 100%;
+}
