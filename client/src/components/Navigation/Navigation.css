@@ -4,14 +4,13 @@
     display: grid;
     row-gap: 20px;
     align-items: center;
+    background-size: 30rem;
     justify-items: stretch;
     grid-template-rows: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-origin: content-box;
-    background-image: url(https://media.giphy.com/media/VFMeeockL9plc2Oh5e/giphy.gif);
-    background-size: 30rem;
-    
+    background-image: url(https://media.giphy.com/media/VFMeeockL9plc2Oh5e/giphy.gif); 
 }
 
 
