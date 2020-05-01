@@ -1,15 +1,31 @@
 import React from 'react';
 import './Events.css';
 
-const Jams = () => {
+const Events = () => {
     return (
         <div>
           <div className="event-cards-container">
-              <div className="event-card-create event-card"><button>Create Event</button></div>
-              <div className="event-card-view event-card"><button>View Events</button></div>
-          </div>          
+            <Viewevents />
+            <Createevent />
+          </div>
         </div>
     );
 }
 
-export default Jams;
+const Viewevents = () => {
+    return (
+        <div>
+            <h1>View Events Component yoyo</h1>
+        </div>
+    );
+}
+
+const Createevent = () => {
+    return (
+        <div>
+            <h1>Create Events Component yoyo</h1>
+        </div>
+    );
+}
+
+export default Events;
