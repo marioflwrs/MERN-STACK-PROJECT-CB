@@ -3,11 +3,9 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-
+    
 }
 
-.event-card {
-    cursor: pointer;
-    border: solid black 1px;
+.event-container {
+    border: black solid 2px;
 }
-
