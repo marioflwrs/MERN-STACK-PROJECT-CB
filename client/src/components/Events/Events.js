@@ -2,28 +2,31 @@ import React from 'react';
 import './Events.css';
 
 const Events = () => {
+    const eventList = [
+        {id: 'el1', text: 'event 1'},
+        {id: 'el2', text: 'event 2'},
+        {id: 'el3', text: 'event 3'},
+    ]
     return (
         <div>
           <div className="event-cards-container">
-            <Viewevents />
+            <Viewevents elist={eventList} />
             <Createevent />
           </div>
         </div>
     );
 }
 
-const Viewevents = () => {
+const Viewevents = props => {
+    console.log(props.elist);
     return (
         <div>
-            <div className="event-container">
-                <h1>View Events</h1>
-                    <div className="event-list-container">
-                        <h3>Event Title</h3>
-                        <h4>Location</h4>
-                        <h4>Date</h4>
-                        <h4>Organizer</h4>
-                    </div>
-            </div> 
+            <h1>View Events</h1>
+            <ul className="event-list">{
+                props.elist.map((list) => {
+                    return <li key={list.id}>{list.text}</li>
+                })
+            }</ul>
         </div>
     );
 }
@@ -33,16 +36,7 @@ const Createevent = () => {
         <div>
             <div className="event-container">
                 <h1>Create Event</h1>
-                <CreateeventBegin />
             </div>
-        </div>
-    );
-}
-
-const CreateeventBegin = () => {
-    return (
-        <div>
-            <h1>Create Event Begin</h1>
         </div>
     );
 }

@@ -8,7 +8,6 @@ import './components/Navigation/Navigation.css';
 import Navigation from './components/Navigation/Navigation';
 
 function App() {
-
   return (
       <div className="website-container">
         <Navigation />
