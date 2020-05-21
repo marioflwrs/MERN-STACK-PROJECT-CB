@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Events.css';
 
+
+
+
 const Events = () => {
-    const eventList = [
+
+    const [eventList, setEventList] = useState([
         {id: 'el1', text: 'event 1'},
         {id: 'el2', text: 'event 2'},
         {id: 'el3', text: 'event 3'},
-    ]
-
+    ]);
+    
+    //eslint-disable-next-line
+    {/* 
+    addNewEventHandler pushes the new 
+    created event onto the sample data list "eventList". 
+    Adds onto the hardcoded array. 
+    */}
+    
     const addNewEventHandler = (newEvent) => {
-        eventList.push(newEvent);
-        console.log(eventList);
+        //code below works but is not bullet proof for manipulation of state.
+        //setEventList(eventList.concat(newEvent));
+        //code below is a safer approach if your state update depends on the previous state  
+        setEventList(prevEventList => prevEventList.concat(newEvent));
     };
-
-
+    
+    //eslint-disable-next-line
+    {/* 
+        Directing onCreateEvent to the addNewEventHandler to the createEvent component 
+        Viewevents has elist directing to eventList
+    */}
     return (
         <div>
           <div className="event-cards-container">
@@ -46,7 +63,7 @@ const Createevent = props => {
                     <button type="submit">Add Event</button>
                 </form>
             </div>
-        </div>
+        </div>  
     );
 }
 
