@@ -43,30 +43,31 @@ const Events = () => {
 
 
 const Createevent = props => {
-    let enteredText = '';
+    const [enteredText, setEnteredText] = useState('');
 
-    const addEventHandler = event => {
+    
+
+    const textChangeHandler = event => {
+        setEnteredText(event.target.value);
+    };
+
+const addEventHandler = event => {
         event.preventDefault();
 
         const newEvent = {
             id: Math.random().toString(),
             text: enteredText
         };
-        console.log(newEvent);
+
+        setEnteredText('');
 
         props.onCreateEvent(newEvent);
-    };
-
-    const textChangeHandler = event => {
-        enteredText = event.target.value;
-    };
-
-    return (
+    };    return (
         <div>
             <div className="event-container">
                 <h1>Create Event</h1>
                 <form className="new-event" onSubmit={addEventHandler}>
-                    <input type="text" onChange={textChangeHandler} />
+                    <input type="text" value={enteredText} onChange={textChangeHandler} />
                     <button type="submit">Add Event</button>
                 </form>
             </div>
