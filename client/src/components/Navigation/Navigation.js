@@ -1,31 +1,41 @@
 //Modules
 import React from 'react';
-import { Link, Router } from '@reach/router';
+import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
 
 //Navigation Style
 import './Navigation.css';
 
 //Components
-import Forum from '../Forum/Forum.js';
 import Home from '../Home/Home.js';
+import Forum from '../Forum/Forum.js';
 import Events from '../Events/Events.js';
 
 const Navigation = () => {
     return (
+      <Router>
         <div>
           <nav className="nav-bar">
-            <Link to="/"><h1>CypherBreak</h1></Link> 
-            <Link to="/Forum"><h1>Forum</h1></Link>
-            <Link to="/Events"><h1>Events</h1></Link>
-          </nav>
 
-          <Router>
-            <Home path="/" />
-            <Forum path="/Forum" />
-            <Events path="/Events" />
-          </Router>
+                <Link to="/"><h1>Home</h1></Link>
+                <Link to="forum"><h1>Forum</h1></Link>
+                <Link to="events"><h1>Events</h1></Link>
+             
+          </nav>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/forum">
+              <Forum />
+            </Route>
+            <Route path="/events">
+              <Events />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
         </div>
+      </Router>
     );
 }
 
-export default Navigation;
+export default Navigation; 
