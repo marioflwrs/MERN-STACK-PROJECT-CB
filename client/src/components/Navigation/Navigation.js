@@ -9,6 +9,7 @@ import './Navigation.css';
 import Home from '../Home/Home.js';
 import Forum from '../Forum/Forum.js';
 import Events from '../Events/Events.js';
+import Users from '../users/Users.js';
 
 const Navigation = () => {
     return (
@@ -30,6 +31,9 @@ const Navigation = () => {
             </Route>
             <Route path="/events">
               <Events />
+            </Route>
+            <Route path="/users">
+              <Users />
             </Route>
             <Redirect to="/" />
           </Switch>

@@ -3,7 +3,7 @@ import React from 'react';
 import UserItem from './UserItem';
 import './UsersList.css';
 
-const UserList = props => {
+const UsersList = props => {
     if (props.items.length === 0) {
         return ( 
         <div className="center">
@@ -13,7 +13,7 @@ const UserList = props => {
     }
 
     return (
-        <ul>
+        <ul className="users-list">
             {props.items.map(user => (
                 <UserItem 
                 key={user.id} 
@@ -27,4 +27,4 @@ const UserList = props => {
     );
 };
 
-export default UsersList
+export default UsersList;

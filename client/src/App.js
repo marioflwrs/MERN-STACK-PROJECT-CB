@@ -6,6 +6,8 @@ import './components/Navigation/Navigation.css';
 //Components
 import Navigation from './components/Navigation/Navigation';
 
+
+
 function App() {
   return (
       <div className="website-container">
