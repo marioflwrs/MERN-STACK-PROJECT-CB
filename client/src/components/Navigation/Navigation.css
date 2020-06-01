@@ -12,16 +12,3 @@
     background-origin: content-box;
     background-image: url(https://media.giphy.com/media/VFMeeockL9plc2Oh5e/giphy.gif); 
 }
-
-
-.nav-bar h1 {
-    margin: 0;
-    width: 100%;
-}
-
-a {
-    margin: 0;
-    font-size: 4em;
-    color: #adadad;
-    text-decoration: none;
-}
