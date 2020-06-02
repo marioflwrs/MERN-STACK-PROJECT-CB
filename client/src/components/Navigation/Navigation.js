@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-ro
 import './Navigation.css';
 
 //Components
-import Home from '../Home/Home.js';
-import Forum from '../Forum/Forum.js';
-import Events from '../Events/Events.js';
-import Users from '../users/Users.js';
+import Home from '../Home/Home';
+import Forum from '../Forum/Forum';
+import Events from '../Events/Events';
+import Users from '../users/Users';
 
 const Navigation = () => {
     return (

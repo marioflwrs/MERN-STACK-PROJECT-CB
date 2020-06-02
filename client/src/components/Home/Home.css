@@ -1,12 +1,21 @@
 .article-container {
     display: grid;
-    row-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  /*  row-gap: 10px;
     column-gap: 10px;
     justify-items:center;
     align-content: center;
     grid-template-rows: auto;
     justify-content: space-evenly;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     
 }
 
+.article-container h1 {
+    font-family: 'Montserrat';
+}
+
+.article-container p {
+    font-size: 25px;
+}

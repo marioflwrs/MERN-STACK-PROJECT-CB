@@ -1,9 +1,11 @@
 //modules
 import React from 'react';
+
+//Style
 import './App.css';
-import './components/Navigation/Navigation.css';
 
 //Components
+import Home from './components/Home/Home';
 import Navigation from './components/Navigation/Navigation';
 
 
