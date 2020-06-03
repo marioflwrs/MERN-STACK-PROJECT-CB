@@ -1,20 +1,24 @@
 .article-container {
     display: grid;
     word-wrap: normal;
-    border: 5px solid #BB3500; 
     justify-items: left;
     color: darkolivegreen;
     grid-template-columns: repeat(autofit, minmax(200px, 1fr));
     width: 100%;
     justify-content: center;
+    transition: ease-in-out 0.5s;
+    overflow: hidden;
     
 }
 
 .article__main {
+    border-top: 5px solid #BB3500;
+    border-bottom: 5px solid #BB3500; 
     width: 50%;
     text-align: left;
     margin: 11%;
     transition: ease-in-out 0.5s;
+    
 }
 
 .article__title {
