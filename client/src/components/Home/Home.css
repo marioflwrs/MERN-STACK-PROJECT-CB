@@ -4,15 +4,9 @@
     border: 5px solid #BB3500; 
     justify-items: left;
     color: darkolivegreen;
-    grid-template-columns: repeat(autofill, minmax(200px, 1fr));
-     /* width: 50%;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-items:center;
-    align-content: center;
-    grid-template-rows: auto;
-    justify-content: space-evenly;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    width: 100%;
+    justify-content: center;
     
 }
 
@@ -20,7 +14,7 @@
     width: 50%;
     text-align: left;
     margin: 11%;
-    transition: ease-in-out 2s;
+    transition: ease-in-out 0.5s;
 }
 
 .article__title {
@@ -39,7 +33,7 @@
         text-align: left;
         margin: 0;
         text-align: left;
-        transition: ease-in-out 2s;
+        transition: ease-in-out 0.5s;
     }
      
 }
