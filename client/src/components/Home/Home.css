@@ -1,23 +1,23 @@
 .article-container {
+    width: 100%;
     display: grid;
+    overflow: hidden;
     word-wrap: normal;
     justify-items: left;
-    color: darkolivegreen;
-    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
-    width: 100%;
     justify-content: center;
+    color: darkolivegreen;
     transition: ease-in-out 0.5s;
-    overflow: hidden;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
     
 }
 
 .article__main {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    transition: ease-in-out 0.5s;
     border-top: 5px solid #BB3500;
     border-bottom: 5px solid #BB3500; 
-    width: 50%;
-    text-align: left;
-    margin: 11%;
-    transition: ease-in-out 0.5s;
     
 }
 
@@ -30,12 +30,11 @@
     word-wrap: break-word;
 }
 
-
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 600px) {
     .article__main {
-        width: 100%;
+        width: 50%;
+        margin: 11%;
         text-align: left;
-        margin: 0;
         text-align: left;
         transition: ease-in-out 0.5s;
     }
