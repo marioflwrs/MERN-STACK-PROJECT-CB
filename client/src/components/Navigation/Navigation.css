@@ -12,3 +12,8 @@
     background-origin: content-box;
     background-image: url(https://media.giphy.com/media/VFMeeockL9plc2Oh5e/giphy.gif); 
 }
+
+.nav-bar a {
+    width: 0%;
+    text-decoration: none;
+}

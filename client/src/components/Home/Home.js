@@ -1,7 +1,5 @@
 import React from 'react';
 
-//Styles
-import './Home.css';
 
 //Components
 import FrontpageArticle from './FrontpageArticle';
