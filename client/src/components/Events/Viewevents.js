@@ -1,11 +1,8 @@
 import React from 'react';
 
-//Styling
-import './Events.css';
-
-
 //Components
 import './Createevent';
+
 
 const Viewevents = props => {
     console.log(props.elist);

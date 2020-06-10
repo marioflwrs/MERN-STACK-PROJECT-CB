@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 const Createevent = props => {
     const [enteredText, setEnteredText] = useState('');
 
