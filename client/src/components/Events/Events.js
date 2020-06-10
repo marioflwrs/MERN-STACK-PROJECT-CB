@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+
+//Components
+import Createevent from './Createevent';
+import ViewEvents from './Viewevents';
+
+//Styling
 import './Events.css';
 
 
@@ -35,59 +41,16 @@ const Events = () => {
         <div>
           <div className="event-cards-container">
             <Createevent onCreateEvent={addNewEventHandler} />
-            <Viewevents elist={eventList} />
+            <ViewEvents elist={eventList} />
           </div>
         </div>
     );
 }
 
 
-const Createevent = props => {
-    const [enteredText, setEnteredText] = useState('');
-
-    
-
-    const textChangeHandler = event => {
-        setEnteredText(event.target.value);
-    };
-
-const addEventHandler = event => {
-        event.preventDefault();
-
-        const newEvent = {
-            id: Math.random().toString(),
-            text: enteredText
-        };
-
-        setEnteredText('');
-
-        props.onCreateEvent(newEvent);
-    };    return (
-        <div>
-            <div className="event-container">
-                <h1>Create Event</h1>
-                <form className="new-event" onSubmit={addEventHandler}>
-                    <input type="text" value={enteredText} onChange={textChangeHandler} />
-                    <button type="submit">Add Event</button>
-                </form>
-            </div>
-        </div>  
-    );
-}
 
 
-const Viewevents = props => {
-    console.log(props.elist);
-    return (
-        <div>
-            <h1>View Events</h1>
-            <ul className="event-list">{
-                props.elist.map((list) => {
-                    return <li key={list.id}>{list.text}</li>
-                })
-            }</ul>
-        </div>
-    );
-}
+
+
 
 export default Events;

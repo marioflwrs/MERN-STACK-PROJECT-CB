@@ -21,8 +21,13 @@
     
 }
 
-.article__title {
+.article__title, .article__author {
     font-family: 'Montserrat';
+    text-align: center;
+}
+
+.article__content {
+    padding: 0 25px;
 }
 
 .article__content, .article__author {
@@ -30,13 +35,20 @@
     word-wrap: break-word;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
     .article__main {
-        width: 50%;
+        width: 70%;
         margin: 11%;
         text-align: left;
         text-align: left;
         transition: ease-in-out 0.5s;
+    }
+     
+}
+
+@media screen and (min-width: 1000px) {
+    .article__main {
+        width: 50%;
     }
      
 }

@@ -12,16 +12,21 @@ import Events from '../Events/Events';
 import Users from '../users/Users';
 
 const Navigation = () => {
+
+    /*const backgroundStyle = {
+      color: 'red';
+    }*/
+
     return (
       <Router>
         <div>
-          <nav className="nav-bar">
+            <nav className="nav-bar">
 
-                <Link to="/"><h1>Home</h1></Link>
-                <Link to="forum"><h1>Forum</h1></Link>
-                <Link to="events"><h1>Events</h1></Link>
-             
-          </nav>
+                  <Link to="/"><h1>Home</h1></Link>
+                  <Link to="forum"><h1>Forum</h1></Link>
+                  <Link to="events"><h1>Events</h1></Link>
+              
+            </nav>
           <Switch>
             <Route exact path="/">
               <Home />
