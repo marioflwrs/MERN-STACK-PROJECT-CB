@@ -22,11 +22,11 @@ const addEventHandler = event => {
     };    return (
         <div>
             <div className="event-container">
+
                 <h1>Create Event</h1>
                 <form className="new-event" onSubmit={addEventHandler}>
                     <input type="text" value={enteredText} onChange={textChangeHandler} />
                     <button type="submit">Add Event</button>
-                    
                 </form>
             </div>
         </div>  

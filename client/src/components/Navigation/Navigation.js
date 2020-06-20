@@ -9,19 +9,17 @@ import './Navigation.css';
 import Home from '../Home/Home';
 import Forum from '../Forum/Forum';
 import Events from '../Events/Events';
-import Users from '../users/Users';
+import Users from '../Users/Users';
+import UserPortal from '../UserPortal/UserPortal';
 
 const Navigation = () => {
 
-    /*const backgroundStyle = {
-      color: 'red';
-    }*/
 
     return (
       <Router>
         <div>
             <nav className="nav-bar">
-
+                  <UserPortal />
                   <Link to="/"><h1>Home</h1></Link>
                   <Link to="forum"><h1>Forum</h1></Link>
                   <Link to="events"><h1>Events</h1></Link>
