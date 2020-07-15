@@ -13,34 +13,37 @@ import Users from '../Users/Users';
 import UserPortal from '../UserPortal/UserPortal';
 
 const Navigation = () => {
-
+ 
 
     return (
       <Router>
-        <div>
-            <nav className="nav-bar">
-                  <UserPortal />
-                  <Link to="/"><h1>Home</h1></Link>
-                  <Link to="forum"><h1>Forum</h1></Link>
-                  <Link to="events"><h1>Events</h1></Link>
+
+          <div>
+              <nav className="nav-bar">
+                    <UserPortal />
+                    <Link to="/"><h1>Home</h1></Link>
+                    <Link to="forum"><h1>Forum</h1></Link>
+                    <Link to="events"><h1>Events</h1></Link>
+                
+              </nav>
               
-            </nav>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/forum">
-              <Forum />
-            </Route>
-            <Route path="/events">
-              <Events />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            <Redirect to="/" />
-          </Switch>
-        </div>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/forum">
+                  <Forum />
+                </Route>
+                <Route path="/events">
+                  <Events />
+                </Route>
+                <Route path="/users">
+                  <Users />
+                </Route>
+                <Redirect to="/" />
+              </Switch>
+          </div>
+
       </Router>
     );
 }
