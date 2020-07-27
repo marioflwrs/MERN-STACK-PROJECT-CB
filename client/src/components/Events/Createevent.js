@@ -1,35 +1,91 @@
-import React, { useState } from 'react';
+import React, { useCallback, useReducer } from 'react';
+import Input from '../FormElements/Input';
+import Button from '../FormElements/Button';
 
-const Createevent = props => {
-    const [enteredText, setEnteredText] = useState('');
+import { 
+    VALIDATOR_REQUIRE, 
+    VALIDATOR_MINLENGTH 
+} from '../../shared/util/validators';
 
-    const textChangeHandler = event => {
-        setEnteredText(event.target.value);
-    };
 
-const addEventHandler = event => {
+const formReducer = (state, action) => {
+    switch(action.type) {
+        case 'INPUT_CHANGE':
+            let formIsValid = true;
+            for (const inputId in state.inputs) {
+                if (inputId === action.inputId) {
+                    formIsValid = formIsValid && action.isValid;
+                } else {
+                    formIsValid = formIsValid && state.inputs[inputId].isValid;
+                }
+            }
+            return {
+                ...state,
+                inputs: {
+                    ...state.inputs,
+                    [action.inputId]: { value: action.value, isValid: action.isValid }
+                },
+                isValid: formIsValid
+            };
+        
+        default:
+            return state;
+    }
+};
 
-        event.preventDefault();
+const Createevent = () => {
+    
+    const [formState, dispatch] = useReducer(formReducer, {
+        inputs: {
+            title: {
+                value: '',
+                isValid: false
+            }
+        },
 
-        const newEvent = {
-            id: Math.random().toString(),
-            text: enteredText
-        };
+        isValid: {
+            description: {
+                value: '',
+                isValid: false
+            }
+        },
+        isValid: false
+    });
 
-        setEnteredText('');
+    const inputHandler = useCallback((id, value, isValid) => {
+        dispatch({
+            type: 'INPUT_CHANGE', 
+            value: value, 
+            isValid: isValid, 
+            inputId: id
+        });
+    }, []);
 
-        props.onCreateEvent(newEvent);
-    };    return (
-        <div>
-            <div className="event-container">
 
-                <h1>Create Event</h1>
-                <form className="new-event" onSubmit={addEventHandler}>
-                    <input type="text" value={enteredText} onChange={textChangeHandler} />
-                    <button type="submit">Add Event</button>
-                </form>
-            </div>
-        </div>  
+    return (
+        <form className="event-form event-container">
+            <Input 
+                id="title"
+                element="input" 
+                type="text" 
+                label="Title" 
+                validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(5)]} 
+                errorText="Please enter a valid title. (Minimum of 5 characters)"
+                onInput={inputHandler}
+            />
+            <Input 
+                id="description"
+                element="textarea"  
+                label="Description" 
+                validators={[VALIDATOR_MINLENGTH(5)]} 
+                errorText="Please enter a description (at least 5 characters)."
+                onInput={inputHandler}
+            />
+            <Button type="submit" disabled={!formState.isValid}>
+                Add Event
+            </Button>
+        </form>
+    
     );
 }
 

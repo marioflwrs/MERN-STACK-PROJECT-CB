@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     justify-content: right;
-    
+    grid-template-columns: 2fr;
 }
 
 .user-portal-container h1 {
