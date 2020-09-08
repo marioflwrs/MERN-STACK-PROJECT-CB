@@ -61,18 +61,32 @@ const Createevent = () => {
         });
     }, []);
 
+    const eventSubmitHandler = event => {
+        event.preventDefault();
+        console.log(formState.inputs); //send this to the backend (server!)
+    };
 
     return (
-        <form className="event-form event-container">
+        <form className="event-form event-container" onSubmit={eventSubmitHandler}>
             <Input 
                 id="title"
                 element="input" 
                 type="text" 
                 label="Title" 
-                validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(5)]} 
+                validators={[VALIDATOR_REQUIRE()]} 
                 errorText="Please enter a valid title. (Minimum of 5 characters)"
                 onInput={inputHandler}
             />
+
+            <Input 
+                id="address"
+                element="input"  
+                label="Address" 
+                validators={[VALIDATOR_REQUIRE()]} 
+                errorText="Please enter a valid address."
+                onInput={inputHandler}
+            />
+
             <Input 
                 id="description"
                 element="textarea"  
@@ -81,6 +95,7 @@ const Createevent = () => {
                 errorText="Please enter a description (at least 5 characters)."
                 onInput={inputHandler}
             />
+            
             <Button type="submit" disabled={!formState.isValid}>
                 Add Event
             </Button>

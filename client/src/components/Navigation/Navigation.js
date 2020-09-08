@@ -9,8 +9,10 @@ import './Navigation.css';
 import Home from '../Home/Home';
 import Forum from '../Forum/Forum';
 import Events from '../Events/Events';
+import UpdateEvent from '../Events/UpdateEvent';
 import Users from '../Users/Users';
 import UserPortal from '../UserPortal/UserPortal';
+import Createevent from '../Events/Createevent';
 
 const Navigation = () => {
  
@@ -34,8 +36,14 @@ const Navigation = () => {
                 <Route path="/forum">
                   <Forum />
                 </Route>
-                <Route path="/events">
+                <Route>
                   <Events />
+                </Route>
+                <Route path="/events/new">
+                  <Createevent />
+                </Route>
+                <Route path="/events/:placeId">
+                  <UpdateEvent />
                 </Route>
                 <Route path="/users">
                   <Users />
